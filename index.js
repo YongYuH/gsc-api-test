@@ -1,11 +1,18 @@
 import dotenv from 'dotenv'
-import { runWithSpreadSheetId } from './runWithSpreadSheetId.js'
+import { updateSpreadSheet } from './updateSpreadSheet.js'
 
 dotenv.config()
 
 const main = async (req, res) => {
+  const siteUrl = process.env.SITE_URL;
   const spreadsheetId = process.env.SHEET_ID;
-  await runWithSpreadSheetId(spreadsheetId);
+  const sheetName = process.env.SHEET_NAME;
+
+  await updateSpreadSheet({
+    siteUrl,
+    spreadsheetId,
+    sheetName,
+  });
 };
 
 main()
