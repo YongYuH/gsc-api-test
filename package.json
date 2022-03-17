@@ -1,0 +1,17 @@
+{
+  "name": "gsc-api-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "googleapis": "^97.0.0",
+    "moment-timezone": "^0.5.34"
+  }
+}
